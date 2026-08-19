@@ -72,7 +72,7 @@ export function CharacterSheetPage() {
 
       <IdentityCard character={character} update={update} />
 
-      <div className={styles.masonry}>
+      <div className={styles.sectionGrid}>
         <CombatCard character={character} update={update} />
         {sections.resources && <ResourcesCard character={character} update={update} />}
         <AbilityScoresCard character={character} update={update} />
