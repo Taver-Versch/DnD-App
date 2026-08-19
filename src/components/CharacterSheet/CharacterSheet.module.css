@@ -26,31 +26,26 @@
 }
 
 /*
- * Masonry-style packing: CSS multi-column layout fills each column
- * top-to-bottom before wrapping, so short cards (Combat, Resources) get
- * packed under one another instead of leaving dead space the way a rigid
- * grid row would. Column count grows automatically with viewport width.
+ * Fixed 2-column grid: both columns are always the same width, and cards
+ * fill left-to-right, top-to-bottom in DOM order (the default grid
+ * auto-flow), so they're distributed evenly between the two columns instead
+ * of stacking one column deep before starting the next. Row height follows
+ * whichever card in that row is tallest; `align-items: start` keeps the
+ * shorter card in a row at its own natural height instead of stretching to
+ * match.
  */
-.masonry {
-  column-width: 23rem;
-  column-gap: 1rem;
+.sectionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: start;
+  gap: 1rem;
   width: 100%;
 }
 
-.masonry > * {
-  break-inside: avoid;
-  -webkit-column-break-inside: avoid;
-  /* CSS multi-column stretches columns to fill leftover space evenly, which
-     at some viewport widths means one wide, sparse-looking column instead of
-     an extra normal-width one. Capping the card itself keeps every card a
-     consistent size regardless of how wide its column ends up; more columns
-     still appear as the viewport grows since that's driven by column-width
-     above, not by this cap. */
-  width: 100%;
-  max-width: 28rem;
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 1rem;
+@media (max-width: 46rem) {
+  .sectionGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .notFound {
