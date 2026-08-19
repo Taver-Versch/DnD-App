@@ -1,0 +1,90 @@
+.modifierRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.modifierRow label {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-ink-soft);
+}
+
+.modifierInput {
+  width: 5rem;
+}
+
+.diceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4.5rem, 1fr));
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.dieBtn {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0.9rem 0.5rem;
+  border: 2px solid var(--color-border);
+  background: var(--color-parchment-panel);
+  color: var(--color-ink);
+}
+
+.dieBtn:hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-on-gold);
+}
+
+.dieBtn:active {
+  background: var(--color-wine);
+  border-color: var(--color-wine);
+  color: var(--color-on-wine);
+}
+
+.latest {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.85rem 1rem;
+  border: 2px solid var(--color-border);
+  background: var(--color-parchment);
+  margin-bottom: 0.75rem;
+}
+
+.latestLabel {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+}
+
+.latestTotal {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-wine);
+}
+
+.latestBreakdown {
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+.history {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 10rem;
+  overflow-y: auto;
+  font-size: 0.85rem;
+  color: var(--color-ink-soft);
+}
+
+.history li {
+  padding: 0.3rem 0;
+  border-bottom: 1px dotted var(--color-border-soft);
+}

@@ -1,0 +1,59 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.backLink {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  text-decoration: none;
+  color: var(--color-ink-soft);
+}
+
+.actions {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+/*
+ * Masonry-style packing: CSS multi-column layout fills each column
+ * top-to-bottom before wrapping, so short cards (Combat, Resources) get
+ * packed under one another instead of leaving dead space the way a rigid
+ * grid row would. Column count grows automatically with viewport width.
+ */
+.masonry {
+  column-width: 23rem;
+  column-gap: 1rem;
+  width: 100%;
+}
+
+.masonry > * {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  /* CSS multi-column stretches columns to fill leftover space evenly, which
+     at some viewport widths means one wide, sparse-looking column instead of
+     an extra normal-width one. Capping the card itself keeps every card a
+     consistent size regardless of how wide its column ends up; more columns
+     still appear as the viewport grows since that's driven by column-width
+     above, not by this cap. */
+  width: 100%;
+  max-width: 28rem;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0 1rem;
+}
+
+.notFound {
+  text-align: center;
+  padding: 3rem;
+}

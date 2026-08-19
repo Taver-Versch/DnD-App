@@ -1,0 +1,69 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
+  gap: 0.75rem;
+}
+
+.ability {
+  background: var(--color-parchment);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  padding: 0.65rem 0.4rem;
+}
+
+.abilityLabel {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-ink-soft);
+}
+
+.abilityScore {
+  width: 3rem;
+  text-align: center;
+  margin: 0.25rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.abilityMod {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-wine);
+  font-weight: 700;
+}
+
+.saves {
+  margin-top: 0.85rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--color-border-soft);
+}
+
+.savesLabel {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-soft);
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.saveRow {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.15rem 0;
+  font-size: 0.9rem;
+}
+
+.saveLabel {
+  flex: 1;
+}
+
+.saveBonus {
+  margin-left: auto;
+  font-weight: 700;
+}

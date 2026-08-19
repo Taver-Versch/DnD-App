@@ -1,0 +1,69 @@
+.topRow {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.topRow > * {
+  flex: 1 1 8rem;
+  min-width: 0;
+}
+
+.statRow {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.stat {
+  flex: 1;
+  min-width: 80px;
+  background: var(--color-parchment);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  padding: 0.4rem;
+}
+
+.statLabel {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-ink-soft);
+  display: block;
+}
+
+.statValue {
+  width: 100%;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  background: transparent;
+}
+
+.hpRow {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.attacksSection {
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--color-border-soft);
+}
+
+.attacksLabel {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-ink-soft);
+  display: block;
+  margin-bottom: 0.3rem;
+}

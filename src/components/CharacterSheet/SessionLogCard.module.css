@@ -1,0 +1,24 @@
+.entry {
+  padding: 0.5rem 0;
+  border-bottom: 1px dotted var(--color-border-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.entryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.dateInput {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-ink);
+  background: var(--color-parchment-panel);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-sm);
+  padding: 0.25em 0.4em;
+}

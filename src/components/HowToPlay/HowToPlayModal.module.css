@@ -1,0 +1,54 @@
+.section {
+  margin-bottom: 1.25rem;
+}
+
+.section h4 {
+  font-family: var(--font-heading);
+  color: var(--color-wine);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--color-border-soft);
+}
+
+.list {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.p {
+  margin: 0 0 0.5rem;
+}
+
+.actionList {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.actionRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 0.6rem;
+  padding: 0.3rem 0;
+  border-bottom: 1px dotted var(--color-border-soft);
+}
+
+.actionRow dt {
+  font-weight: 700;
+  color: var(--color-ink);
+  flex: 0 0 8rem;
+}
+
+.actionRow dd {
+  margin: 0;
+  flex: 1 1 14rem;
+  color: var(--color-ink-soft);
+  font-size: 0.9rem;
+}

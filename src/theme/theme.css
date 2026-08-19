@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&family=Pirata+One&family=Fondamento&family=Uncial+Antiqua&family=MedievalSharp&display=swap');
+
+:root {
+  --color-parchment: #ece0c4;
+  --color-parchment-dark: #ddc99e;
+  --color-parchment-shadow: #c9b384;
+  --color-ink: #2a1e14;
+  --color-ink-soft: #4a3826;
+  --color-wine: #6e1f22;
+  --color-wine-bright: #8f2a2e;
+  --color-forest: #33502f;
+  --color-gold: #a9791f;
+  --color-gold-bright: #c99a3a;
+  --color-parchment-panel: #f4ead2;
+  --color-border: #7a5a34;
+  --color-border-soft: #b79a68;
+  --color-danger: #7a2020;
+  --color-danger-bright: #a53030;
+  --color-success: #33502f;
+  /* Text-on-colored-surface tokens: don't reuse --color-ink/--color-parchment-panel
+     for this - those flip meaning between light and dark themes (ink is dark in
+     light themes, light in dark themes) which breaks contrast when applied
+     naively to accent-colored backgrounds. These are picked per-theme instead. */
+  --color-on-wine: #f4ead2;
+  --color-on-gold: #2a1e14;
+  --color-on-danger: #f4ead2;
+
+  --font-display: 'Cinzel Decorative', 'Cinzel', serif;
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'IM Fell English', Georgia, serif;
+
+  --radius-sm: 0;
+  --radius-md: 0;
+  --shadow-panel: 0 2px 6px rgba(42, 30, 20, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-ink);
+  background-color: var(--color-parchment-dark);
+  font-size: 17px;
+  line-height: 1.4;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--color-ink);
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5em;
+}
+
+button {
+  font-family: var(--font-heading);
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  font-family: var(--font-body);
+  font-size: 1em;
+  color: var(--color-ink);
+  background: var(--color-parchment-panel);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-sm);
+  padding: 0.35em 0.5em;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 1px;
+}
+
+a {
+  color: var(--color-wine);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-parchment-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-soft);
+  border: 2px solid var(--color-parchment-dark);
+}

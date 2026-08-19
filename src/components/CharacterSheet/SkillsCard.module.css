@@ -1,0 +1,37 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.2rem 0.1rem;
+  font-size: 0.9rem;
+  border-bottom: 1px dotted var(--color-border-soft);
+}
+
+.ability {
+  color: var(--color-ink-soft);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  width: 2rem;
+}
+
+.name {
+  flex: 1;
+}
+
+.bonus {
+  font-weight: 700;
+  width: 2.5rem;
+  text-align: right;
+}
+
+.legend {
+  font-size: 0.72rem;
+  color: var(--color-ink-soft);
+  margin-top: 0.5rem;
+}
